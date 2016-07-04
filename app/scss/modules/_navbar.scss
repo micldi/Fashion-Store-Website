@@ -1,3 +1,60 @@
-body {
-	background-color: map-get($colors, my);
+nav.navbar {
+	background-color: map-get($colors, white);
+	width: 100%;
+	height: 50px;
+	position: relative;
+
+	.mobileNav {
+		display: inline-block;
+		height: 20px;
+		width: 20px;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		cursor: pointer;
+		span {
+			display: block;
+			width: 20px;
+			height: 1px;
+			margin-bottom: 5px;
+
+			background-color: map-get($colors, black);
+		}
+	}
+
+	.container {
+		display: inline-block;
+		width: 100%;
+		margin-top: 15px;
+		.header {
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			width: 100%;
+			display: inline-block;
+			font-size: 17px;
+			color: map-get($colors, black);
+		}
+		.content {
+			display: none;
+		}
+	}
 }
+/*
+	@include mquery(xs) {
+		background-color: red;
+	}
+	@include mquery(sm) {
+		background-color: green;
+	}
+	@include mquery(md) {
+		background-color: blue;
+	}
+	@include mquery(xl) {
+		background-color: brown;
+	}
+	@include mquery(xxl) {
+		background-color: rose;
+	}
+
+*/

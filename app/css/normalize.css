@@ -4,7 +4,6 @@
  * 2. Correct the line height in all browsers.
  * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import 'https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Walter+Turncoat';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -368,98 +367,3 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
-
-body {
-  font-family: 'Lato', sans-serif; }
-
-html, body {
-  width: 100%; }
-
-body {
-  min-height: 100vh;
-  background-color: red; }
-
-nav.navbar {
-  background-color: #fff;
-  width: 100%;
-  height: 50px;
-  position: relative; }
-  nav.navbar .mobileNav {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    cursor: pointer; }
-    nav.navbar .mobileNav span {
-      display: block;
-      width: 20px;
-      height: 1px;
-      margin-bottom: 5px;
-      background-color: #161616; }
-  nav.navbar .container {
-    display: inline-block;
-    width: 100%;
-    margin-top: 15px; }
-    nav.navbar .container .header {
-      text-transform: uppercase;
-      text-decoration: none;
-      text-align: center;
-      width: 100%;
-      display: inline-block;
-      font-size: 17px;
-      color: #161616; }
-    nav.navbar .container .content {
-      display: none; }
-
-/*
-	@include mquery(xs) {
-		background-color: red;
-	}
-	@include mquery(sm) {
-		background-color: green;
-	}
-	@include mquery(md) {
-		background-color: blue;
-	}
-	@include mquery(xl) {
-		background-color: brown;
-	}
-	@include mquery(xxl) {
-		background-color: rose;
-	}
-
-*/
-.containerSlides {
-  width: 100%; }
-  .containerSlides .slide1 {
-    width: 100%;
-    min-height: 40vh;
-    background-color: #4fbf90;
-    color: #fff;
-    background-image: url("../img/slide1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 30% bottom;
-    position: relative; }
-    .containerSlides .slide1 .container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 50%;
-      text-align: left; }
-      .containerSlides .slide1 .container header .class {
-        text-transform: uppercase;
-        color: #eae9eb;
-        font-size: 13px;
-        position: relative; }
-        .containerSlides .slide1 .container header .class:after {
-          content: "";
-          position: absolute;
-          left: 10px;
-          display: block;
-          width: 15px;
-          height: 1px;
-          background-color: red; }

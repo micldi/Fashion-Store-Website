@@ -1,0 +1,45 @@
+.containerSlides {
+	width: 100%;
+	.slide1 {
+		width: 100%;
+		min-height: 40vh;
+
+		background-color: map-get($colors, green);
+		color: map-get($colors, white);
+
+		background-image: url('../img/slide1.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 30% bottom;
+
+		position: relative;
+
+		.container {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			right: 0;
+			width: 50%;
+			text-align: left;
+			header {
+				.class {
+					text-transform: uppercase;
+					color: map-get($colors, lightGray);
+					font-size: 13px;
+					position: relative;
+					&:after {
+						content: "";
+						position: absolute;
+						left: 10px;
+
+						display: block;
+						width: 15px;
+						height: 1px;
+						background-color: red;
+					}
+				}
+			}
+		}
+	}
+}
