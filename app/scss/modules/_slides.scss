@@ -43,7 +43,7 @@
 	}
 
 	.slide1 {
-		min-height: 40vh;
+		min-height: 50vh;
 
 		background-color: map-get($colors, green);
 		color: map-get($colors, white);
@@ -176,7 +176,7 @@
 	.slide6 {
 		@include mquery(xl) {
 			width: 25%;
-			min-height: 50vh;
+			min-height: 60vh;
 		}
 		min-height: 100vh;
 		position: relative;
@@ -213,7 +213,7 @@
 		@include mquery(xl) {
 			width: 50%;
 		}
-		min-height: 50vh;
+		min-height: 60vh;
 
 		background-color: map-get($colors, white);
 

@@ -34,9 +34,37 @@ nav.navbar {
 			display: inline-block;
 			font-size: 17px;
 			color: map-get($colors, black);
+
+			@include mquery(sm) {
+				text-align: left;
+				width: 90%;
+				left: 10%;
+				position: relative;
+			}
 		}
 		.content {
-			display: none;
+			@include mquery(sm) {
+				display: inline-block;
+				float: right;
+				position: relative;
+				top: -35px;
+			}
+			.main {
+				display: none;
+			}
+			.cart {
+				display: none;
+
+				list-style: none;
+
+				@include mquery(sm) {
+					display: inline-block;
+
+					li {
+						display: inline;
+					}
+				}
+			}
 		}
 	}
 }

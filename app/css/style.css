@@ -413,8 +413,28 @@ nav.navbar {
       display: inline-block;
       font-size: 17px;
       color: #161616; }
-    nav.navbar .container .content {
+      @media (min-width: 600px) {
+        nav.navbar .container .header {
+          text-align: left;
+          width: 90%;
+          left: 10%;
+          position: relative; } }
+    @media (min-width: 600px) {
+      nav.navbar .container .content {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: -35px; } }
+    nav.navbar .container .content .main {
       display: none; }
+    nav.navbar .container .content .cart {
+      display: none;
+      list-style: none; }
+      @media (min-width: 600px) {
+        nav.navbar .container .content .cart {
+          display: inline-block; }
+          nav.navbar .container .content .cart li {
+            display: inline; } }
 
 /*
 	@include mquery(xs) {
@@ -468,7 +488,7 @@ nav.navbar {
         color: #fff;
         margin: 0 0 25px 0; }
   .containerSlides .slide1 {
-    min-height: 40vh;
+    min-height: 50vh;
     background-color: #4fbf90;
     color: #fff;
     background-image: url("../img/slide1.png");
@@ -561,7 +581,7 @@ nav.navbar {
       .containerSlides .slide4,
       .containerSlides .slide6 {
         width: 25%;
-        min-height: 50vh; } }
+        min-height: 60vh; } }
     .containerSlides .slide4 .container,
     .containerSlides .slide6 .container {
       width: 100%;
@@ -582,7 +602,7 @@ nav.navbar {
   .containerSlides .slide6 {
     background-image: url("../img/slide6.png"); }
   .containerSlides .slide5 {
-    min-height: 50vh;
+    min-height: 60vh;
     background-color: #fff;
     background-image: url("../img/slide5.png");
     background-position: center;
@@ -599,3 +619,88 @@ nav.navbar {
         background-color: #161616; }
       .containerSlides .slide5 .container header .price {
         color: #161616; }
+
+.containerAbout .about1 {
+  position: relative;
+  width: 100%;
+  display: block;
+  clear: both; }
+  .containerAbout .about1 > div {
+    float: left; }
+  .containerAbout .about1 .text {
+    width: 100%;
+    height: 20vh;
+    background-color: #fff;
+    color: #161616;
+    position: relative; }
+    .containerAbout .about1 .text .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%; }
+      .containerAbout .about1 .text .content .class {
+        text-transform: uppercase;
+        color: #161616;
+        font-size: 11px;
+        position: relative; }
+        .containerAbout .about1 .text .content .class:after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          display: block;
+          width: 25px;
+          height: 1px;
+          background-color: #161616; }
+      .containerAbout .about1 .text .content p.main {
+        font-size: 16px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        text-align: justify; }
+    .containerAbout .about1 .text:after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -4vh;
+      z-index: 100;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4vh 5vw 0 5vw;
+      border-color: #fff transparent transparent transparent;
+      line-height: 0px; }
+      @media (min-width: 992px) {
+        .containerAbout .about1 .text:after {
+          left: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          border-width: 5vw 0 5vw 3vh;
+          border-color: transparent transparent transparent #fff; } }
+  .containerAbout .about1 .picture {
+    width: 100%;
+    height: 20vh;
+    background-image: url("../img/about1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+    .containerAbout .about1 .picture .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center; }
+      .containerAbout .about1 .picture .content p {
+        font-size: 25px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400; }
+  @media (min-width: 992px) {
+    .containerAbout .about1 .picture, .containerAbout .about1 .text {
+      width: 50%; } }
