@@ -1,0 +1,25 @@
+{
+  "name": "task14",
+  "version": "1.0.0",
+  "description": "Fashion Store Website - task 14 from Weekly WebDev Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micldi/Fashion-Store-Website.git"
+  },
+  "author": "mic_ldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micldi/Fashion-Store-Website/issues"
+  },
+  "homepage": "https://github.com/micldi/Fashion-Store-Website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.3.2"
+  }
+}
