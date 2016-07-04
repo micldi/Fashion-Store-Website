@@ -379,6 +379,9 @@ body {
   min-height: 100vh;
   background-color: red; }
 
+a, p, h1, h2, h3, h4, h5, h6, b {
+  transition: all 0.3s; }
+
 nav.navbar {
   background-color: #fff;
   width: 100%;
@@ -433,33 +436,95 @@ nav.navbar {
 */
 .containerSlides {
   width: 100%; }
-  .containerSlides .slide1 {
+  .containerSlides section {
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative; }
+    .containerSlides section .container {
+      text-align: left; }
+      .containerSlides section .container header .class {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 11px;
+        position: relative; }
+        .containerSlides section .container header .class:after {
+          content: "";
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          display: block;
+          width: 25px;
+          height: 1px;
+          background-color: #fff; }
+      .containerSlides section .container header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 40px;
+        font-weight: 400;
+        color: #fff;
+        margin: 25px 0 25px 0; }
+      .containerSlides section .container header .price {
+        font-size: 14px;
+        color: #fff;
+        margin: 0 0 25px 0; }
+  .containerSlides .slide1 {
     min-height: 40vh;
     background-color: #4fbf90;
     color: #fff;
     background-image: url("../img/slide1.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 30% bottom;
-    position: relative; }
+    background-position: 30% bottom; }
     .containerSlides .slide1 .container {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 0;
-      width: 50%;
-      text-align: left; }
+      width: 50%; }
       .containerSlides .slide1 .container header .class {
-        text-transform: uppercase;
-        color: #eae9eb;
-        font-size: 13px;
-        position: relative; }
+        color: #161616; }
         .containerSlides .slide1 .container header .class:after {
-          content: "";
-          position: absolute;
-          left: 10px;
-          display: block;
-          width: 15px;
-          height: 1px;
-          background-color: red; }
+          background-color: #161616; }
+        @media (min-width: 460px) {
+          .containerSlides .slide1 .container header .class {
+            color: #fff; }
+            .containerSlides .slide1 .container header .class:after {
+              background-color: #fff; } }
+      .containerSlides .slide1 .container header .price {
+        color: #161616; }
+        @media (min-width: 460px) {
+          .containerSlides .slide1 .container header .price {
+            color: #fff; } }
+      .containerSlides .slide1 .container .btn {
+        display: block;
+        border: 1px solid #161616;
+        color: #161616;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        line-height: 28px;
+        width: 120px;
+        height: 30px;
+        border-radius: 3px;
+        cursor: pointer; }
+        @media (min-width: 460px) {
+          .containerSlides .slide1 .container .btn {
+            color: #fff;
+            border-color: #fff; } }
+        .containerSlides .slide1 .container .btn:hover, .containerSlides .slide1 .container .btn:focus {
+          background-color: #161616;
+          color: #fff; }
+          @media (min-width: 460px) {
+            .containerSlides .slide1 .container .btn:hover, .containerSlides .slide1 .container .btn:focus {
+              background-color: #fff;
+              color: #161616; } }
+  .containerSlides .slide2 {
+    min-height: 50vh;
+    background-color: #afd6e8;
+    background-image: url("../img/slide2.png");
+    background-position: center;
+    background-size: cover; }
+    .containerSlides .slide2 .container {
+      padding: 30px 0 0 30px; }
+      .containerSlides .slide2 .container header .class:after {
+        background-color: #161616; }
+      .containerSlides .slide2 .container header .price {
+        color: #161616; }

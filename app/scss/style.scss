@@ -11,6 +11,10 @@ body {
 	background-color: red;
 }
 
+a, p, h1, h2, h3, h4, h5, h6, b {
+	transition: all 0.3s;
+}
+
 @import "modules/color";
 @import "modules/navbar";
 @import "modules/slides";
