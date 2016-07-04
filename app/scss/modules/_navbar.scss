@@ -4,6 +4,8 @@ nav.navbar {
 	height: 50px;
 	position: relative;
 
+	clear: both;
+
 	.mobileNav {
 		display: inline-block;
 		height: 20px;
@@ -19,6 +21,9 @@ nav.navbar {
 			margin-bottom: 5px;
 
 			background-color: map-get($colors, black);
+		}
+		@include mquery(xl) {
+			display: none;
 		}
 	}
 
@@ -37,9 +42,12 @@ nav.navbar {
 
 			@include mquery(sm) {
 				text-align: left;
-				width: 90%;
+				width: 156px;
 				left: 10%;
 				position: relative;
+			}
+			@include mquery(xl) {
+				left: 20px;
 			}
 		}
 		.content {
@@ -47,10 +55,30 @@ nav.navbar {
 				display: inline-block;
 				float: right;
 				position: relative;
-				top: -35px;
+				top: -16px;
+				width: calc(100% - 176px);
+				text-align: center;
 			}
 			.main {
 				display: none;
+
+				@include mquery(xl) {
+					display: inline-block;
+
+					li {
+						display: inline;
+						a {
+							font-family: 'Gloria Hallelujah', cursive;
+							text-decoration: none;
+							color: map-get($colors, black);
+							margin-right: 15px;
+							&:hover,
+							&:focus {
+								color: map-get($colors, lightGray);
+							}
+						}
+					}
+				}
 			}
 			.cart {
 				display: none;
@@ -59,9 +87,19 @@ nav.navbar {
 
 				@include mquery(sm) {
 					display: inline-block;
+					float: right;
 
 					li {
 						display: inline;
+						a {
+							text-decoration: none;
+							color: map-get($colors, black);
+							margin-right: 15px;
+							&:hover,
+							&:focus {
+								color: map-get($colors, lightGray);
+							}
+						}
 					}
 				}
 			}
