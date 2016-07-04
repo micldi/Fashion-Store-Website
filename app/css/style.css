@@ -516,6 +516,13 @@ nav.navbar {
             .containerSlides .slide1 .container .btn:hover, .containerSlides .slide1 .container .btn:focus {
               background-color: #fff;
               color: #161616; } }
+  .containerSlides .row {
+    position: relative;
+    width: 100%;
+    display: block;
+    clear: both; }
+    .containerSlides .row > section {
+      float: left; }
   .containerSlides .slide2 {
     min-height: 50vh;
     background-color: #afd6e8;
@@ -527,4 +534,68 @@ nav.navbar {
       .containerSlides .slide2 .container header .class:after {
         background-color: #161616; }
       .containerSlides .slide2 .container header .price {
+        color: #161616; }
+  .containerSlides .slide3 {
+    min-height: 50vh;
+    background-color: #ef85ab;
+    background-image: url("../img/slide3.png");
+    background-position: center;
+    background-size: cover; }
+    .containerSlides .slide3 .container {
+      padding: 30px 0 0 30px; }
+      .containerSlides .slide3 .container header .class:after {
+        background-color: #161616; }
+      .containerSlides .slide3 .container header .price {
+        color: #161616; }
+  @media (min-width: 992px) {
+    .containerSlides .slide2, .containerSlides .slide3 {
+      width: 50%; } }
+  .containerSlides .slide4,
+  .containerSlides .slide6 {
+    min-height: 100vh;
+    position: relative;
+    background-color: #fff;
+    background-position: center;
+    background-size: cover; }
+    @media (min-width: 992px) {
+      .containerSlides .slide4,
+      .containerSlides .slide6 {
+        width: 25%;
+        min-height: 50vh; } }
+    .containerSlides .slide4 .container,
+    .containerSlides .slide6 .container {
+      width: 100%;
+      height: 100%; }
+      .containerSlides .slide4 .container header,
+      .containerSlides .slide6 .container header {
+        position: absolute;
+        left: 10px;
+        bottom: 10px; }
+        .containerSlides .slide4 .container header .class,
+        .containerSlides .slide6 .container header .class {
+          color: #161616; }
+          .containerSlides .slide4 .container header .class:after,
+          .containerSlides .slide6 .container header .class:after {
+            background-color: #161616; }
+  .containerSlides .slide4 {
+    background-image: url("../img/slide4.png"); }
+  .containerSlides .slide6 {
+    background-image: url("../img/slide6.png"); }
+  .containerSlides .slide5 {
+    min-height: 50vh;
+    background-color: #fff;
+    background-image: url("../img/slide5.png");
+    background-position: center;
+    background-size: cover;
+    position: relative; }
+    @media (min-width: 992px) {
+      .containerSlides .slide5 {
+        width: 50%; } }
+    .containerSlides .slide5 .container {
+      position: absolute;
+      bottom: 30px;
+      left: 30px; }
+      .containerSlides .slide5 .container header .class:after {
+        background-color: #161616; }
+      .containerSlides .slide5 .container header .price {
         color: #161616; }

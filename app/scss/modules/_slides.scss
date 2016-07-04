@@ -109,6 +109,17 @@
 			}
 		}
 	}
+
+	.row {
+		position: relative;
+		width: 100%;
+		display: block;
+		clear: both;
+		&>section {
+			float: left;
+		}
+	}
+
 	.slide2 {
 		min-height: 50vh;
 
@@ -132,4 +143,100 @@
 			}
 		}
 	}
+	.slide3 {
+		min-height: 50vh;
+
+		background-color: map-get($colors, pink);
+
+		background-image: url('../img/slide3.png');
+		background-position: center;
+		background-size: cover;
+
+		.container {
+			padding: 30px 0 0 30px;
+			header {
+				.class {
+					&:after {
+						background-color: map-get($colors, black);
+					}
+				}
+				.price {
+					color: map-get($colors, black);
+				}
+			}
+		}
+	}
+	.slide2, .slide3 {
+		@include mquery(xl) {
+			width: 50%;
+		}
+	}
+
+	.slide4,
+	.slide6 {
+		@include mquery(xl) {
+			width: 25%;
+			min-height: 50vh;
+		}
+		min-height: 100vh;
+		position: relative;
+
+		background-color: map-get($colors, white);
+
+		background-position: center;
+		background-size: cover;
+
+		.container {
+			width: 100%;
+			height: 100%;
+			header {
+				position: absolute;
+				left: 10px;
+				bottom: 10px;
+				.class {
+					color: map-get($colors, black);
+					&:after {
+						background-color: map-get($colors, black);
+					}
+				}
+			}
+		}
+	}
+	.slide4 {
+		background-image: url('../img/slide4.png');
+	}
+	.slide6 {
+		background-image: url('../img/slide6.png');
+	}
+	
+	.slide5 {
+		@include mquery(xl) {
+			width: 50%;
+		}
+		min-height: 50vh;
+
+		background-color: map-get($colors, white);
+
+		background-image: url('../img/slide5.png');
+		background-position: center;
+		background-size: cover;
+
+		position: relative;
+
+		.container {
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			header {
+				.class {
+					&:after {
+						background-color: map-get($colors, black);
+					}
+				}
+				.price {
+					color: map-get($colors, black);
+				}
+			}
+		}
+	}	
 }
