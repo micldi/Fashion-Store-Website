@@ -719,11 +719,13 @@ nav.navbar {
     background-image: url("../img/slide5.png");
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
     position: relative; }
     @media (min-width: 992px) {
       .containerSlides .slide5 {
         width: 50%; } }
+    @media (min-width: 992px) {
+      .containerSlides .slide5 {
+        background-attachment: fixed; } }
     .containerSlides .slide5 .container {
       position: absolute;
       bottom: 30px;
@@ -743,6 +745,7 @@ nav.navbar {
   .containerAbout .about1 .text {
     width: 100%;
     height: 20vh;
+    min-height: 300px;
     background-color: #fff;
     color: #161616;
     position: relative; }
@@ -795,6 +798,7 @@ nav.navbar {
   .containerAbout .about1 .picture {
     width: 100%;
     height: 20vh;
+    min-height: 300px;
     background-image: url("../img/about1.png");
     background-position: center;
     background-repeat: no-repeat;
