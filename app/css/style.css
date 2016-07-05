@@ -854,16 +854,19 @@ nav.navbar {
   height: 25vh;
   min-height: 200px;
   background-color: #fff;
-  color: #161616;
-  text-align: center; }
-  .containerAbout .about3 .text .content .class {
-    color: #161616;
-    margin-bottom: 20px; }
-    .containerAbout .about3 .text .content .class:after {
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #ff891c; }
+  color: #161616; }
+  .containerAbout .about3 .text .content {
+    text-align: center; }
+    .containerAbout .about3 .text .content .class {
+      color: #161616;
+      margin-bottom: 20px; }
+      .containerAbout .about3 .text .content .class:after {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ff891c; }
+    .containerAbout .about3 .text .content .main {
+      text-align: center; }
   .containerAbout .about3 .text:after {
     top: -6vh;
     left: 50%;

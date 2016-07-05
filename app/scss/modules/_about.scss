@@ -175,8 +175,8 @@
 			background-color: map-get($colors, white);
 			color: map-get($colors, black);
 
-			text-align: center;
 			.content {
+				text-align: center;
 				.class {
 					color: map-get($colors, black);
 					margin-bottom: 20px;
@@ -186,6 +186,9 @@
 						transform: translateX(-50%);
 						background-color: map-get($colors, orange);
 					}
+				}
+				.main {
+					text-align: center;
 				}
 			}
 
