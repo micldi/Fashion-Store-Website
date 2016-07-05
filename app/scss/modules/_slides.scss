@@ -110,16 +110,6 @@
 		}
 	}
 
-	.row {
-		position: relative;
-		width: 100%;
-		display: block;
-		clear: both;
-		&>section {
-			float: left;
-		}
-	}
-
 	.slide2 {
 		min-height: 50vh;
 

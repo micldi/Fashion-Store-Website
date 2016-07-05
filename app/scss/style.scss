@@ -6,6 +6,12 @@
 html, body {
 	width: 100%;
 }
+html {
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: green;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 body {
 	min-height: 100vh;
 	background-color: red;
@@ -15,7 +21,18 @@ a, p, h1, h2, h3, h4, h5, h6, b {
 	transition: all 0.3s;
 }
 
+.row {
+	position: relative;
+	width: 100%;
+	display: block;
+	clear: both;
+	&>section {
+		float: left;
+	}
+}
+
 @import "modules/color";
 @import "modules/navbar";
 @import "modules/slides";
 @import "modules/about";
+@import "modules/footer";
