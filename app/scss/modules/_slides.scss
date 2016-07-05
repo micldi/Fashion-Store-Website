@@ -57,7 +57,10 @@
 			transform: translateY(-50%);
 
 			right: 0;
-			width: 50%;
+			width: 90%;
+			@include mquery(sm) {
+				width: 50%;
+			}
 			header {
 				.class {
 					color: map-get($colors, black);
