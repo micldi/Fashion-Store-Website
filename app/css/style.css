@@ -586,6 +586,7 @@ nav.navbar {
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
+    min-height: 300px;
     background-color: #fff; }
     .containerSlides .slideBody .container {
       text-align: left;
@@ -652,7 +653,7 @@ nav.navbar {
           background-color: #fff;
           color: #161616; }
   .containerSlides .slide2 {
-    min-height: 50vh;
+    height: 50vh;
     background-color: #afd6e8;
     background-image: url("../img/slide2.png");
     background-position: center;
@@ -662,7 +663,7 @@ nav.navbar {
     .containerSlides .slide2 .container .price {
       color: #161616; }
   .containerSlides .slide3 {
-    min-height: 50vh;
+    height: 50vh;
     background-color: #ef85ab;
     background-image: url("../img/slide3.png");
     background-position: center;
@@ -675,14 +676,14 @@ nav.navbar {
     .containerSlides .slide2, .containerSlides .slide3 {
       width: 50%; } }
   .containerSlides .slideStripe {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     background-position: center;
     background-size: cover; }
     @media (min-width: 992px) {
       .containerSlides .slideStripe {
         width: 25%;
-        min-height: 60vh; } }
+        height: 60vh; } }
     .containerSlides .slideStripe .container {
       width: 100%;
       height: 100%; }
@@ -699,7 +700,7 @@ nav.navbar {
   .containerSlides .slide6 {
     background-image: url("../img/slide6.png"); }
   .containerSlides .slide5 {
-    min-height: 60vh;
+    height: 60vh;
     background-image: url("../img/slide5.png");
     background-position: center;
     background-size: cover;
