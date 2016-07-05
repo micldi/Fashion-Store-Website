@@ -11,10 +11,16 @@ html {
 	-webkit-tap-highlight-color: green;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+
+	-webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
 }
 body {
 	min-height: 100vh;
-	background-color: red;
+	background-color: #fff;
 }
 
 a, p, h1, h2, h3, h4, h5, h6, b {
@@ -29,6 +35,11 @@ a, p, h1, h2, h3, h4, h5, h6, b {
 		float: left;
 	}
 	clear: both;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @import "modules/color";
