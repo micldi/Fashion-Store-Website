@@ -17,10 +17,14 @@ html {
     -ms-animation: fadein 2s;
     -o-animation: fadein 2s;
     animation: fadein 2s;
+
+    overflow-x: auto;
 }
 body {
 	min-height: 100vh;
 	background-color: #fff;
+
+	overflow: hidden;
 }
 
 a, p, h1, h2, h3, h4, h5, h6, b {

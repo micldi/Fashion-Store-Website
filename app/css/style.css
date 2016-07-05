@@ -384,11 +384,13 @@ html {
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s; }
+  animation: fadein 2s;
+  overflow-x: auto; }
 
 body {
   min-height: 100vh;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: hidden; }
 
 a, p, h1, h2, h3, h4, h5, h6, b {
   transition: all 0.3s; }
@@ -470,6 +472,10 @@ nav.navbar {
         top: -36px;
         width: 100%;
         text-align: center; } }
+    @media (min-width: 992px) {
+      nav.navbar .container .content {
+        top: -16px;
+        width: calc(100% - 176px); } }
     nav.navbar .container .content .main {
       display: none;
       position: absolute;
@@ -575,19 +581,21 @@ nav.navbar {
 */
 .containerSlides {
   width: 100%; }
-  .containerSlides section {
+  .containerSlides .slideBody {
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative; }
-    .containerSlides section .container {
-      text-align: left; }
-      .containerSlides section .container header .class {
+    position: relative;
+    background-color: #fff; }
+    .containerSlides .slideBody .container {
+      text-align: left;
+      padding: 30px 0 0 30px; }
+      .containerSlides .slideBody .container .class {
         text-transform: uppercase;
         color: #fff;
         font-size: 11px;
         position: relative; }
-        .containerSlides section .container header .class:after {
+        .containerSlides .slideBody .container .class:after {
           content: "";
           position: absolute;
           top: 20px;
@@ -596,13 +604,13 @@ nav.navbar {
           width: 25px;
           height: 1px;
           background-color: #fff; }
-      .containerSlides section .container header h1 {
+      .containerSlides .slideBody .container h1 {
         font-family: 'Playfair Display', serif;
         font-size: 40px;
         font-weight: 400;
         color: #fff;
         margin: 25px 0 25px 0; }
-      .containerSlides section .container header .price {
+      .containerSlides .slideBody .container .price {
         font-size: 14px;
         color: #fff;
         margin: 0 0 25px 0; }
@@ -622,24 +630,14 @@ nav.navbar {
       @media (min-width: 600px) {
         .containerSlides .slide1 .container {
           width: 50%; } }
-      .containerSlides .slide1 .container header .class {
-        color: #161616; }
-        .containerSlides .slide1 .container header .class:after {
-          background-color: #161616; }
-        @media (min-width: 460px) {
-          .containerSlides .slide1 .container header .class {
-            color: #fff; }
-            .containerSlides .slide1 .container header .class:after {
-              background-color: #fff; } }
-      .containerSlides .slide1 .container header .price {
-        color: #161616; }
-        @media (min-width: 460px) {
-          .containerSlides .slide1 .container header .price {
-            color: #fff; } }
+      .containerSlides .slide1 .container .class {
+        color: #fff; }
+        .containerSlides .slide1 .container .class:after {
+          background-color: #fff; }
+      .containerSlides .slide1 .container .price {
+        color: #fff; }
       .containerSlides .slide1 .container .btn {
         display: block;
-        border: 1px solid #161616;
-        color: #161616;
         text-decoration: none;
         text-align: center;
         font-size: 14px;
@@ -647,71 +645,54 @@ nav.navbar {
         width: 120px;
         height: 30px;
         border-radius: 3px;
-        cursor: pointer; }
-        @media (min-width: 460px) {
-          .containerSlides .slide1 .container .btn {
-            color: #fff;
-            border-color: #fff; } }
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #fff; }
         .containerSlides .slide1 .container .btn:hover, .containerSlides .slide1 .container .btn:focus {
-          background-color: #161616;
-          color: #fff; }
-          @media (min-width: 460px) {
-            .containerSlides .slide1 .container .btn:hover, .containerSlides .slide1 .container .btn:focus {
-              background-color: #fff;
-              color: #161616; } }
+          background-color: #fff;
+          color: #161616; }
   .containerSlides .slide2 {
     min-height: 50vh;
     background-color: #afd6e8;
     background-image: url("../img/slide2.png");
     background-position: center;
     background-size: cover; }
-    .containerSlides .slide2 .container {
-      padding: 30px 0 0 30px; }
-      .containerSlides .slide2 .container header .class:after {
-        background-color: #161616; }
-      .containerSlides .slide2 .container header .price {
-        color: #161616; }
+    .containerSlides .slide2 .container .class:after {
+      background-color: #161616; }
+    .containerSlides .slide2 .container .price {
+      color: #161616; }
   .containerSlides .slide3 {
     min-height: 50vh;
     background-color: #ef85ab;
     background-image: url("../img/slide3.png");
     background-position: center;
     background-size: cover; }
-    .containerSlides .slide3 .container {
-      padding: 30px 0 0 30px; }
-      .containerSlides .slide3 .container header .class:after {
-        background-color: #161616; }
-      .containerSlides .slide3 .container header .price {
-        color: #161616; }
+    .containerSlides .slide3 .container .class:after {
+      background-color: #161616; }
+    .containerSlides .slide3 .container .price {
+      color: #161616; }
   @media (min-width: 992px) {
     .containerSlides .slide2, .containerSlides .slide3 {
       width: 50%; } }
-  .containerSlides .slide4,
-  .containerSlides .slide6 {
+  .containerSlides .slideStripe {
     min-height: 100vh;
     position: relative;
-    background-color: #fff;
     background-position: center;
     background-size: cover; }
     @media (min-width: 992px) {
-      .containerSlides .slide4,
-      .containerSlides .slide6 {
+      .containerSlides .slideStripe {
         width: 25%;
         min-height: 60vh; } }
-    .containerSlides .slide4 .container,
-    .containerSlides .slide6 .container {
+    .containerSlides .slideStripe .container {
       width: 100%;
       height: 100%; }
-      .containerSlides .slide4 .container header,
-      .containerSlides .slide6 .container header {
+      .containerSlides .slideStripe .container header {
         position: absolute;
         left: 10px;
         bottom: 10px; }
-        .containerSlides .slide4 .container header .class,
-        .containerSlides .slide6 .container header .class {
+        .containerSlides .slideStripe .container header .class {
           color: #161616; }
-          .containerSlides .slide4 .container header .class:after,
-          .containerSlides .slide6 .container header .class:after {
+          .containerSlides .slideStripe .container header .class:after {
             background-color: #161616; }
   .containerSlides .slide4 {
     background-image: url("../img/slide4.png"); }
@@ -719,7 +700,6 @@ nav.navbar {
     background-image: url("../img/slide6.png"); }
   .containerSlides .slide5 {
     min-height: 60vh;
-    background-color: #fff;
     background-image: url("../img/slide5.png");
     background-position: center;
     background-size: cover;
@@ -734,37 +714,36 @@ nav.navbar {
       position: absolute;
       bottom: 30px;
       left: 30px; }
-      .containerSlides .slide5 .container header .class:after {
+      .containerSlides .slide5 .container .class:after {
         background-color: #161616; }
-      .containerSlides .slide5 .container header .price {
+      .containerSlides .slide5 .container .price {
         color: #161616; }
 
-.containerAbout .about1 {
+.containerAbout .aboutBody {
   position: relative;
   width: 100%;
-  display: block;
-  clear: both; }
-  .containerAbout .about1 > div {
+  display: block; }
+  .containerAbout .aboutBody .insideAbout {
     float: left; }
-  .containerAbout .about1 .text {
+  .containerAbout .aboutBody .text {
     width: 100%;
     height: 20vh;
     min-height: 300px;
     background-color: #fff;
     color: #161616;
     position: relative; }
-    .containerAbout .about1 .text .content {
+    .containerAbout .aboutBody .text .content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 80%; }
-      .containerAbout .about1 .text .content .class {
+      .containerAbout .aboutBody .text .content .class {
         text-transform: uppercase;
         color: #161616;
         font-size: 11px;
         position: relative; }
-        .containerAbout .about1 .text .content .class:after {
+        .containerAbout .aboutBody .text .content .class:after {
           content: "";
           position: absolute;
           top: 20px;
@@ -773,12 +752,12 @@ nav.navbar {
           width: 25px;
           height: 1px;
           background-color: #161616; }
-      .containerAbout .about1 .text .content p.main {
+      .containerAbout .aboutBody .text .content .main {
         font-size: 16px;
         font-family: 'Playfair Display', serif;
         font-weight: 400;
         text-align: justify; }
-    .containerAbout .about1 .text:after {
+    .containerAbout .aboutBody .text:after {
       display: block;
       position: absolute;
       left: 50%;
@@ -793,13 +772,13 @@ nav.navbar {
       border-color: #fff transparent transparent transparent;
       line-height: 0px; }
       @media (min-width: 992px) {
-        .containerAbout .about1 .text:after {
+        .containerAbout .aboutBody .text:after {
           left: 100%;
           top: 50%;
           transform: translateY(-50%);
           border-width: 5vw 0 5vw 9vw;
           border-color: transparent transparent transparent #fff; } }
-  .containerAbout .about1 .picture {
+  .containerAbout .aboutBody .picture {
     width: 100%;
     height: 20vh;
     min-height: 300px;
@@ -808,7 +787,7 @@ nav.navbar {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; }
-    .containerAbout .about1 .picture .content {
+    .containerAbout .aboutBody .picture .content {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -818,157 +797,83 @@ nav.navbar {
       color: #fff;
       padding: 20px 0;
       text-align: center; }
-      .containerAbout .about1 .picture .content p {
+      .containerAbout .aboutBody .picture .content p {
         font-size: 25px;
         font-family: 'Playfair Display', serif;
         font-weight: 400; }
-  @media (min-width: 992px) {
-    .containerAbout .about1 .picture, .containerAbout .about1 .text {
+
+@media (min-width: 992px) {
+  .containerAbout .about1 .insideAbout {
+    width: 50%; } }
+
+@media (min-width: 992px) {
+  .containerAbout .about2 {
+    width: 50%; } }
+
+.containerAbout .about2 .text {
+  height: 30vh;
+  min-height: 300px;
+  background-color: #292929;
+  color: #fff; }
+  @media (min-width: 600px) {
+    .containerAbout .about2 .text {
+      width: 50%;
+      height: 50vh; } }
+  .containerAbout .about2 .text .content .class {
+    color: #fff; }
+    .containerAbout .about2 .text .content .class:after {
+      background-color: #ff891c; }
+  .containerAbout .about2 .text:after {
+    top: -5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 15vw 5vh 15vw;
+    border-color: transparent transparent #292929 transparent; }
+    @media (min-width: 600px) {
+      .containerAbout .about2 .text:after {
+        top: 50%;
+        left: -9vw;
+        transform: translateY(-50%);
+        border-width: 5vw 9vw 5vw 0;
+        border-color: transparent #292929 transparent transparent; } }
+
+.containerAbout .about2 .picture {
+  height: 50vh;
+  min-height: 300px;
+  background-image: url("../img/about2.png"); }
+  @media (min-width: 600px) {
+    .containerAbout .about2 .picture {
       width: 50%; } }
 
-.containerAbout .about2 {
-  position: relative;
-  width: 100%;
-  float: left; }
-  .containerAbout .about2 > div {
-    float: left; }
-  @media (min-width: 992px) {
-    .containerAbout .about2 {
-      width: 50%; } }
-  .containerAbout .about2 .text {
-    width: 100%;
-    height: 30vh;
-    min-height: 300px;
-    background-color: #292929;
-    color: #fff;
-    position: relative; }
-    @media (min-width: 600px) {
-      .containerAbout .about2 .text {
-        width: 50%;
-        height: 50vh; } }
-    .containerAbout .about2 .text .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%; }
-      .containerAbout .about2 .text .content .class {
-        text-transform: uppercase;
-        color: #fff;
-        font-size: 11px;
-        position: relative; }
-        .containerAbout .about2 .text .content .class:after {
-          content: "";
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          display: block;
-          width: 25px;
-          height: 1px;
-          background-color: #ff891c; }
-      .containerAbout .about2 .text .content p.main {
-        font-size: 16px;
-        font-family: 'Playfair Display', serif;
-        font-weight: 400;
-        text-align: justify; }
-    .containerAbout .about2 .text:after {
-      display: block;
-      position: absolute;
-      top: -5vh;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 100;
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 15vw 5vh 15vw;
-      border-color: transparent transparent #292929 transparent;
-      line-height: 0px; }
-      @media (min-width: 600px) {
-        .containerAbout .about2 .text:after {
-          top: 50%;
-          left: -9vw;
-          transform: translateY(-50%);
-          border-width: 5vw 9vw 5vw 0;
-          border-color: transparent #292929 transparent transparent; } }
-  .containerAbout .about2 .picture {
-    width: 100%;
-    height: 50vh;
-    min-height: 300px;
-    background-image: url("../img/about2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    @media (min-width: 600px) {
-      .containerAbout .about2 .picture {
-        width: 50%; } }
+@media (min-width: 992px) {
+  .containerAbout .about3 {
+    width: 50%; } }
 
-.containerAbout .about3 {
-  position: relative;
-  width: 100%;
-  float: left; }
-  .containerAbout .about3 > div {
-    float: left; }
-  @media (min-width: 992px) {
-    .containerAbout .about3 {
-      width: 50%; } }
-  .containerAbout .about3 .text {
-    width: 100%;
-    height: 25vh;
-    min-height: 200px;
-    background-color: #fff;
+.containerAbout .about3 .text {
+  height: 25vh;
+  min-height: 200px;
+  background-color: #fff;
+  color: #161616;
+  text-align: center; }
+  .containerAbout .about3 .text .content .class {
     color: #161616;
-    text-align: center;
-    position: relative; }
-    .containerAbout .about3 .text .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%; }
-      .containerAbout .about3 .text .content .class {
-        text-transform: uppercase;
-        color: #161616;
-        font-size: 11px;
-        position: relative;
-        margin-bottom: 20px; }
-        .containerAbout .about3 .text .content .class:after {
-          content: "";
-          position: absolute;
-          top: 20px;
-          left: 50%;
-          transform: translateX(-50%);
-          display: block;
-          width: 25px;
-          height: 1px;
-          background-color: #ff891c; }
-      .containerAbout .about3 .text .content p.main {
-        font-size: 16px;
-        font-family: 'Playfair Display', serif;
-        font-weight: 400; }
-    .containerAbout .about3 .text:after {
-      display: block;
-      position: absolute;
-      top: -6vh;
+    margin-bottom: 20px; }
+    .containerAbout .about3 .text .content .class:after {
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 100;
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 5vw 6vh 5vw;
-      border-color: transparent transparent #fff transparent;
-      line-height: 0px; }
-  .containerAbout .about3 .picture {
-    width: 100%;
-    height: 25vh;
-    min-height: 200px;
-    background-image: url("../img/about3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+      background-color: #ff891c; }
+  .containerAbout .about3 .text:after {
+    top: -6vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 5vw 6vh 5vw;
+    border-color: transparent transparent #fff transparent; }
+
+.containerAbout .about3 .picture {
+  height: 25vh;
+  min-height: 200px;
+  background-image: url("../img/about3.png"); }
 
 footer.landingPage {
   clear: both;

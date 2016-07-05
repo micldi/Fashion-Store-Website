@@ -1,10 +1,9 @@
 .containerAbout {
-	.about1 {
+	.aboutBody {
 		position: relative;
 		width: 100%;
 		display: block;
-		clear: both;
-		&>div {
+		.insideAbout {
 			float: left;
 		}
 
@@ -42,7 +41,7 @@
 					}
 				}
 
-				p.main {
+				.main {
 					font-size: 16px;
 					font-family: 'Playfair Display', serif;
 					font-weight: 400;
@@ -105,8 +104,9 @@
 				}
 			}
 		}
-
-		.picture, .text {
+	}
+	.about1 {
+		.insideAbout {
 			@include mquery(xl) {
 				width: 50%;
 			}
@@ -114,18 +114,11 @@
 	}
 
 	.about2 {
-		position: relative;
-		width: 100%;
-		float: left;
-		&>div {
-			float: left;
-		}
 		@include mquery(xl) {
 			width: 50%;
 		}
 
 		.text {
-			width: 100%;
 			height: 30vh;
 			min-height: 300px;
 			@include mquery(sm) {
@@ -135,55 +128,21 @@
 
 			background-color: map-get($colors, dirt);
 			color: map-get($colors, white);
-
-			position: relative;
 			.content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-
-				width: 80%;
-
 				.class {
-					text-transform: uppercase;
 					color: map-get($colors, white);
-					font-size: 11px;
-					position: relative;
 					&:after {
-						content: "";
-						position: absolute;
-						top: 20px;
-						left: 20px;
-						display: block;
-						width: 25px;
-						height: 1px;
 						background-color: map-get($colors, orange);
 					}
-				}
-
-				p.main {
-					font-size: 16px;
-					font-family: 'Playfair Display', serif;
-					font-weight: 400;
-					text-align: justify;
 				}
 			}
 
 			&:after {
-				display: block;
-				position: absolute;
 				top: -5vh;
 				left: 50%;
 				transform: translateX(-50%);
-				z-index: 100;
-				content: "";
-				width: 0;
-				height: 0;
-				border-style: solid;
 				border-width: 0 15vw 5vh 15vw;
 				border-color: transparent transparent map-get($colors, dirt) transparent;
-				line-height: 0px;
 				@include mquery(sm) {
 					top: 50%;
 					left: -9vw;
@@ -194,7 +153,6 @@
 			}
 		}
 		.picture {
-			width: 100%;
 			height: 50vh;
 			min-height: 300px;
 			@include mquery(sm) {
@@ -202,25 +160,15 @@
 			}
 
 			background-image: url('../img/about2.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
 		}
 	}
 
 	.about3 {
-		position: relative;
-		width: 100%;
-		float: left;
-		&>div {
-			float: left;
-		}
 		@include mquery(xl) {
 			width: 50%;
 		}
 
 		.text {
-			width: 100%;
 			height: 25vh;
 			min-height: 200px;
 
@@ -228,67 +176,32 @@
 			color: map-get($colors, black);
 
 			text-align: center;
-
-			position: relative;
 			.content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-
-				width: 80%;
-
 				.class {
-					text-transform: uppercase;
 					color: map-get($colors, black);
-					font-size: 11px;
-					position: relative;
 					margin-bottom: 20px;
 					&:after {
-						content: "";
-						position: absolute;
 						top: 20px;
 						left: 50%;
 						transform: translateX(-50%);
-						display: block;
-						width: 25px;
-						height: 1px;
 						background-color: map-get($colors, orange);
 					}
-				}
-
-				p.main {
-					font-size: 16px;
-					font-family: 'Playfair Display', serif;
-					font-weight: 400;
 				}
 			}
 
 			&:after {
-				display: block;
-				position: absolute;
 				top: -6vh;
 				left: 50%;
 				transform: translateX(-50%);
-				z-index: 100;
-				content: "";
-				width: 0;
-				height: 0;
-				border-style: solid;
 				border-width: 0 5vw 6vh 5vw;
 				border-color: transparent transparent map-get($colors, white) transparent;
-				line-height: 0px;
 			}
 		}
 		.picture {
-			width: 100%;
 			height: 25vh;
 			min-height: 200px;
 
 			background-image: url('../img/about3.png');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
 		}
 	}
 }
