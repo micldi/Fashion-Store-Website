@@ -3,6 +3,7 @@ footer.landingPage {
 	float: left;
 	width: 100%;
 	height: 50vh;
+	min-height: 500px;
 	background-color: map-get($colors, black);
 	position: relative;
 

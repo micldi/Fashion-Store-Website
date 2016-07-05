@@ -43,7 +43,8 @@
 	}
 
 	.slide1 {
-		min-height: 50vh;
+		height: 50vh;
+		min-height: 400px;
 
 		background-color: map-get($colors, green);
 		color: map-get($colors, white);
